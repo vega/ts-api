@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "build",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "preserveConstEnums": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/vega-lite/typings"],
+    "incremental": true
+  },
+  "files": ["src/index.ts"]
+}

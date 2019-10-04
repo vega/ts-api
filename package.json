@@ -1,0 +1,64 @@
+{
+  "name": "ts-api",
+  "version": "0.0.0",
+  "description": "Generate APIs from Vega-Lite Typings.",
+  "module": "build/src/index.js",
+  "repository": "git@github.com:vega/ts-api.git",
+  "author": {
+    "name": "Vega",
+    "url": "http://vega.github.io/"
+  },
+  "contributors": [
+    {
+      "name": "Dominik Moritz",
+      "url": "https://www.domoritz.de"
+    },
+    {
+      "name": "Zach Nation",
+      "url": "https://github.com/znation"
+    }
+  ],
+  "license": "BSD-3",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.6.3",
+    "vega-lite": "^4.0.0-beta.9",
+    "vega-lite-dev-config": "^0.3.0"
+  },
+  "scripts": {
+    "tsc:src": "tsc -p tsconfig.src.json",
+    "build": "yarn tsc:src",
+    "watch": "yarn build -w",
+    "test": "jest",
+    "prepare": "beemo create-config",
+    "eslintbase": "beemo eslint '{src,test}/**/*.ts'",
+    "fix": "yarn eslintbase --fix",
+    "lint": "yarn eslintbase"
+  },
+  "beemo": {
+    "module": "vega-lite-dev-config",
+    "drivers": [
+      "eslint",
+      "prettier"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "<rootDir>/build",
+      "src"
+    ]
+  }
+}
