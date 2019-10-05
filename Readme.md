@@ -1,4 +1,4 @@
-# API generator for TypeScript
+# API generator for TypeScript ![](https://github.com/vega/ts-api/workflows/Test/badge.svg)
 
 Here be 🐉. Work in progress 🚧.
 
